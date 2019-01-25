@@ -9,17 +9,26 @@ public class PlatformerPlayer : MonoBehaviour {
     public float DownwardsForcePerSecond = 2.5f;
 
     private Rigidbody playerRigidbody;
+    private PlayerOpenMap playerOpenMap;
 
     private bool canJump = true;
 
 	// Use this for initialization
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody>();
-
+        playerOpenMap = GetComponent<PlayerOpenMap>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (playerOpenMap.IsMapOpened)
+        {
+            var velocity = playerRigidbody.velocity;
+            velocity.x = 0f;
+            playerRigidbody.velocity = velocity;
+            return;
+        }
+
         float hor = Input.GetAxis("Horizontal");
         float jump = Input.GetAxisRaw("Jump");
 

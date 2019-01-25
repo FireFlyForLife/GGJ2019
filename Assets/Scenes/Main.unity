@@ -159,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &168590337
 Transform:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168590336}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -241,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291723570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.8, y: -14.4, z: 43.1}
+  m_LocalPosition: {x: -30.8, y: -14.4, z: 84.8}
   m_LocalScale: {x: 28.06848, y: 28.06849, z: 28.06849}
   m_Children: []
   m_Father: {fileID: 2073779833}
@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 702490768}
   - component: {fileID: 702490767}
   - component: {fileID: 702490766}
+  - component: {fileID: 702490771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -417,6 +418,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702490764}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &702490771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702490764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98347b474e1f514aa142e452e8cf279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaytraceCamera: {fileID: 168590339}
+  IsMapOpened: 0
 --- !u!1 &968406091
 GameObject:
   m_ObjectHideFlags: 0
