@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+public enum PlayerAxis
+{
+    X,
+    Z
+}
 
 [RequireComponent(typeof(HealthComponent), typeof(ThirdPersonUserControl))]
 public class PlayerManager : MonoBehaviour {
@@ -9,11 +14,57 @@ public class PlayerManager : MonoBehaviour {
     private ThirdPersonUserControl userControl;
     [SerializeField]
     private PlayerUI playerUI;
+    private Camera playerCamera;
+    private PlayerAxis playerAxis = PlayerAxis.X;
+
+    public Camera PlayerCamera
+    {
+        get
+        {
+            return playerCamera;
+        }
+    }
+    public PlayerUI PlayerUI
+    {
+        get
+        {
+            return playerUI;
+        }
+    }
+    public ThirdPersonUserControl UserControl
+    {
+        get
+        {
+            return userControl;
+        }
+    }
+
+    public HealthComponent Health
+    {
+        get
+        {
+            return health;
+        }
+    }
+
+    public PlayerAxis PlayerAxis
+    {
+        get
+        {
+            return playerAxis;
+        }
+        set
+        {
+            playerAxis = value;
+        }
+    }
 
     // Use this for initialization
     void Start () {
         health = GetComponent<HealthComponent>();
         userControl = GetComponent<ThirdPersonUserControl>();
+
+        playerCamera = Camera.main;
     }
 	
 	// Update is called once per frame
