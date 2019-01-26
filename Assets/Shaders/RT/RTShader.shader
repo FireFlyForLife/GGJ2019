@@ -16,7 +16,8 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"
-			float4 _Positions[1000];
+			float4 _Positions[100];
+			float4 _Colors[100];
 			int _Size = 0;
 
 			struct appdata
@@ -85,7 +86,7 @@
 			};
 
 
-			Cube GenerateCube(float3 pos, float angle, float3 axis)
+			Cube GenerateCube(float3 pos, float angle, float3 axis, float3 col)
 			{
 				Cube cube;
 				cube.pos = pos;
@@ -134,47 +135,47 @@
 				cube.vtx[34].pos = mul(mat, float4(0.5, 0.5, 0.5, 1.)).xyz;
 				cube.vtx[35].pos = mul(mat, float4(-0.5, 0.5, 0.5, 1.)).xyz;
 
-				cube.vtx[0].color = float3(1, 0, 0);
-				cube.vtx[1].color = float3(1, 0, 0);
-				cube.vtx[2].color = float3(1, 0, 0);
-				cube.vtx[3].color = float3(1, 0, 0);
-				cube.vtx[4].color = float3(1, 0, 0);
-				cube.vtx[5].color = float3(1, 0, 0);
+				cube.vtx[0].color = col;
+				cube.vtx[1].color = col;
+				cube.vtx[2].color = col;
+				cube.vtx[3].color = col;
+				cube.vtx[4].color = col;
+				cube.vtx[5].color = col;
 
-				cube.vtx[6].color = float3 (1, 0, 0);
-				cube.vtx[7].color = float3 (1, 0, 0);
-				cube.vtx[8].color = float3 (1, 0, 0);
-				cube.vtx[9].color = float3 (1, 0, 0);
-				cube.vtx[10].color = float3(1, 0, 0);
-				cube.vtx[11].color = float3(1, 0, 0);
+				cube.vtx[6].color = col;
+				cube.vtx[7].color = col;
+				cube.vtx[8].color = col;
+				cube.vtx[9].color = col;
+				cube.vtx[10].color =col;
+				cube.vtx[11].color =col;
 
-				cube.vtx[12].color = float3(1, 0, 0);
-				cube.vtx[13].color = float3(1, 0, 0);
-				cube.vtx[14].color = float3(1, 0, 0);
-				cube.vtx[15].color = float3(1, 0, 0);
-				cube.vtx[16].color = float3(1, 0, 0);
-				cube.vtx[17].color = float3(1, 0, 0);
+				cube.vtx[12].color = col;
+				cube.vtx[13].color = col;
+				cube.vtx[14].color = col;
+				cube.vtx[15].color = col;
+				cube.vtx[16].color = col;
+				cube.vtx[17].color = col;
 
-				cube.vtx[18].color = float3(1, 0, 0);
-				cube.vtx[19].color = float3(1, 0, 0);
-				cube.vtx[20].color = float3(1, 0, 0);
-				cube.vtx[21].color = float3(1, 0, 0);
-				cube.vtx[22].color = float3(1, 0, 0);
-				cube.vtx[23].color = float3(1, 0, 0);
+				cube.vtx[18].color = col;
+				cube.vtx[19].color = col;
+				cube.vtx[20].color = col;
+				cube.vtx[21].color = col;
+				cube.vtx[22].color = col;
+				cube.vtx[23].color = col;
 
-				cube.vtx[24].color = float3(1, 0, 0);
-				cube.vtx[25].color = float3(1, 0, 0);
-				cube.vtx[26].color = float3(1, 0, 0);
-				cube.vtx[27].color = float3(1, 0, 0);
-				cube.vtx[28].color = float3(1, 0, 0);
-				cube.vtx[29].color = float3(1, 0, 0);
+				cube.vtx[24].color = col;
+				cube.vtx[25].color = col;
+				cube.vtx[26].color = col;
+				cube.vtx[27].color = col;
+				cube.vtx[28].color = col;
+				cube.vtx[29].color = col;
 
-				cube.vtx[30].color = float3(1, 0, 0);
-				cube.vtx[31].color = float3(1, 0, 0);
-				cube.vtx[32].color = float3(1, 0, 0);
-				cube.vtx[33].color = float3(1, 0, 0);
-				cube.vtx[34].color = float3(1, 0, 0);
-				cube.vtx[35].color = float3(1, 0, 0);
+				cube.vtx[30].color = col;
+				cube.vtx[31].color = col;
+				cube.vtx[32].color = col;
+				cube.vtx[33].color = col;
+				cube.vtx[34].color = col;
+				cube.vtx[35].color = col;
 				return cube;
 			}
 
@@ -353,8 +354,12 @@
 				float maxDist = 99999999.;
 
 				Cube cubes[50];
-				for(int i = 0; i < _Size; ++i)
-					cubes[i] = GenerateCube(_Positions[i], time, float3(1, 1, 10));
+				for (int i = 0; i < _Size; ++i)
+				{
+					if(_Colors[i].x + _Colors[i].y + _Colors[i].z > 0.)
+					cubes[i] = GenerateCube(_Positions[i], time, float3(1, 1, 10), _Colors[i].xyz);
+					else cubes[i] = GenerateCube(_Positions[i], time + i * 5, float3(1, 1, 10), _Colors[i].xyz);
+				}
 
 				float3 pos = float3(0, 0, 0);
 				HitData hitData;
@@ -362,6 +367,7 @@
 				hitData.dist = maxDist;
 				float3 closestOrigin = r.O;
 				float3 closestDirection = r.D;
+				int closestIdx;
 				for (int i = 0; i < _Size; ++i)
 				{
 					HitData hd;
@@ -373,35 +379,45 @@
 						hitData = hd;
 						closestOrigin = hd.P;
 						closestDirection = reflect(r.D, hd.N);
+						closestIdx = i;
 					}
 				}
-				if (hitData.hit) {
-					r.O = closestOrigin;
-					r.D = closestDirection;
+				if (hitData.hit) 
+				{
+					if (hitData.col.x + hitData.col.y + hitData.col.z == 0)
+					{
+						r.O = closestOrigin;
+						r.D = closestDirection;
 
-					HitData hd2;
-					hd2.hit = false;
-					hd2.dist = maxDist;
-					for (int j = 0; j < _Size; ++j) {
-						HitData hd3;
-						hd3.dist = hd2.dist;
-						hd3 = IntersectCube(cubes[j], r, hd3.dist);
-						if (hd3.hit) {
-							hd2 = hd3;
+						HitData hd2;
+						hd2.hit = false;
+						hd2.dist = maxDist;
+						for (int i = 0; i < _Size; ++i) {
+							HitData hd3;
+							hd3.dist = hd2.dist;
+							hd3.hit = false;
+							if (closestIdx == i) continue;
+							hd3 = IntersectCube(cubes[i], r, hd3.dist);
+							if (hd3.hit) {
+								hd2 = hd3;
+							}
+						}
+						if (hd2.hit) {
+							_OutBuffer[0] += hd2.col.r;
+							_OutBuffer[1] += hd2.col.g;
+							_OutBuffer[2] += hd2.col.b;
+
+							col = hd2.col /* dot(hd2.N, L)*/;
+						}
+						else {
+							hd2 = IntersectFloor(r, hd2.dist);
+							if (hd2.hit) col = hd2.col * dot(hd2.N, L);
+							else col = GetBackgroundColor(r);
 						}
 					}
-					if (hd2.hit) {
-						_OutBuffer[0] += hd2.col.r;
-						_OutBuffer[1] += hd2.col.g;
-						_OutBuffer[2] += hd2.col.b;
-
-						col = hd2.col /** dot(hd2.N, L)*/;
-					} else {
-						hd2 = IntersectFloor(r, hd2.dist);
-						if (hd2.hit) col = hd2.col * dot(hd2.N, L);
-						else col = GetBackgroundColor(r);
-					}
-				} else {
+					else col = hitData.col * dot(hitData.N,L);
+				} 
+				else {
 					hitData = IntersectFloor(r, hitData.dist);
 					if (!hitData.hit) col = GetBackgroundColor(r);
 					else col = hitData.col * dot(hitData.N, L);

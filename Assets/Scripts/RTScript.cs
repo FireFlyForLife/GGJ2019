@@ -48,10 +48,18 @@ public class RTScript : MonoBehaviour
 
 
         List<Vector4> positons = new List<Vector4>();
+        List<Vector4> colors = new List<Vector4>();
         for (int i = 0; i < 5; ++i)
-            positons.Add(new Vector4(0, 0, i * 4, 0));
+        positons.Add(new Vector4(0, 0, i * 4, 0));
+        colors.Add(new Vector4(1,0,0,0));
+        colors.Add(new Vector4(0,0,0,0));
+        colors.Add(new Vector4(0,1,0,0));
+        colors.Add(new Vector4(0,0,1,0));
+        colors.Add(new Vector4(1,0,1,0));
+
         mat.SetVectorArray("_Positions", positons);
-        mat.SetInt("_Size", 2);
+        mat.SetVectorArray("_Colors", colors);
+        mat.SetInt("_Size", 3);
         mat.SetVector("_CamPosition", position);
         mat.SetFloat("_CamRotation", rotation * Mathf.Deg2Rad);
         mat.SetBuffer("_OutBuffer", buffer);
