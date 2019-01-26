@@ -12,7 +12,6 @@ public class PlatformerPlayer : MonoBehaviour {
     private Rigidbody playerRigidbody;
     private PlayerOpenMap playerOpenMap;
     private CapsuleCollider capsuleCollider;
-    [SerializeField] private GameObject camera;
 
     private bool canJump = true;
 
@@ -38,16 +37,14 @@ public class PlatformerPlayer : MonoBehaviour {
         float jump = Input.GetAxisRaw("Jump");
         {
             var velocity = playerRigidbody.velocity;
-            if (Math.Abs(camera.transform.localEulerAngles.y % 90.0) < 0.0001)
-                velocity = camera.transform.right * hor * MovementSpeed + new Vector3(0, velocity.y, 0);
+            if (Math.Abs(Camera.main.transform.localEulerAngles.y % 90.0) < 0.0001)
+                velocity = Camera.main.transform.right * hor * MovementSpeed + new Vector3(0, velocity.y, 0);
             else
             {
                 velocity.x = 0;
                 velocity.z = 0;
             }
             playerRigidbody.velocity = velocity;
-
-            //playerRigidbody.AddForce(new Vector3(hor, 0f, 0f) * MovementSpeed);
         }
         if(jump == 1f && canJump)
         {

@@ -20,11 +20,11 @@ public class Rotator : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
-        PlatformerPlayer p = c.GetComponent<PlatformerPlayer>();
-        if (!m_isBusy && p)
+        if (!m_isBusy)
         {
-            m_cam.transform.parent.localEulerAngles =  new Vector3(0, m_target, 0);
-            p.transform.position =  new Vector3(transform.position.x, p.transform.position.y, transform.position.z);
+            m_cam.transform.localEulerAngles =  new Vector3(0, m_target, 0);
+            c.transform.position =  new Vector3(transform.position.x, c.transform.position.y, transform.position.z);
+            m_cam.transform.position = c.transform.position + c.transform.InverseTransformVector(new Vector3(0, 0, 10));
             if (Math.Abs(m_target - m_rotation1) < 0.001)
             {
                 m_target = m_rotation2;
@@ -35,20 +35,6 @@ public class Rotator : MonoBehaviour
                 m_target = m_rotation1;
                 if (m_wallToEnable) m_wallToEnable.SetActive(true);
             }
-        }
-    }
-
-    private IEnumerator Rotate(PlatformerPlayer p, float target)
-    {
-        while (m_isBusy)
-        {
-            float diff = m_target - p.transform.eulerAngles.y;
-            float delta = diff / diff * m_rotSpeed * Time.deltaTime;
-
-            if (Mathf.Abs(diff) <= delta)
-                p.transform.localEulerAngles = new Vector3(0, m_target, 0);
-            else p.transform.localEulerAngles += new Vector3(0,delta,0);
-            yield return new WaitForEndOfFrame();
         }
     }
 }
