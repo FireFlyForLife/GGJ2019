@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerOpenMap : MonoBehaviour {
-    public Camera RaytraceCamera;
+    public GameObject RaytraceCamera;
     public bool IsMapOpened;
 
 	// Use this for initialization
 	void Start () {
-        IsMapOpened = RaytraceCamera.enabled;
+        IsMapOpened = RaytraceCamera.activeSelf;
     }
 	
 	// Update is called once per frame
@@ -16,7 +16,7 @@ public class PlayerOpenMap : MonoBehaviour {
         if(Input.GetButtonDown("Toggle Map"))
         {
             IsMapOpened = (!IsMapOpened);
-            RaytraceCamera.enabled = IsMapOpened;
+            RaytraceCamera.SetActive( IsMapOpened );
         }
         
     }

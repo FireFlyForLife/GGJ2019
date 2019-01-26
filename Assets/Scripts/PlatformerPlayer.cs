@@ -61,6 +61,11 @@ public class PlatformerPlayer : MonoBehaviour {
         canJump = true;
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        canJump = true;
+    }
+
     private void OnCollisionExit(Collision collision)
     {
     }
