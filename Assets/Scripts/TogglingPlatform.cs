@@ -13,7 +13,7 @@ public class TogglingPlatform : MonoBehaviour {
     // Use this for initialization
     void Start () {
         if (enabled != StartsEnabled)
-            Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!");
+            Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!", this);
 		
 		gameObject.SetActive(StartsEnabled);
 	}

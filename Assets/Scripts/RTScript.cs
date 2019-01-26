@@ -37,11 +37,16 @@ public class RTScript : MonoBehaviour
 
         //viewMatrixCache = new Matrix4x4();
         //viewMatrixCache.SetTRS(position, Quaternion.AngleAxis(rotation, Vector3.up), Vector3.one);
+
+        List<float> l = new List<float>() { 0, 0, 0 };
+        buffer.SetData(l);
     }
 
     void OnRenderObject()
     {
         Graphics.ClearRandomWriteTargets();
+
+
         List<Vector4> positons = new List<Vector4>();
         for (int i = 0; i < 5; ++i)
             positons.Add(new Vector4(0, 0, i * 4, 0));
@@ -56,7 +61,15 @@ public class RTScript : MonoBehaviour
         buffer.GetData(floats);
         for (int i = 0; i < floats.Length; i++)
         {
-            print(mat.name + " : " + i + ":  " + floats[i]);
+            if(floats[i] != 0f)
+                print(mat.name + " : " + i + ":  " + floats[i]);
         }
     }
+
+    //void OnPostRender()
+    //{
+    //    print("Post Render");
+    //    List<float> l = new List<float>() { 0, 0, 0 };
+    //    buffer.SetData(l);
+    //}
 }

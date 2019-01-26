@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SmoothCameraFollow : MonoBehaviour {
     public Transform TargetTransform;
-    public float Speed = 5f;
 
-    private Vector3 offset;
+    public bool DontUseOffset = false;
+
+    [HideInInspector]
+    public Vector3 offset = new Vector3();
 
 	// Use this for initialization
 	void Start () {
-        offset = transform.position - TargetTransform.position;
+        if(!DontUseOffset)
+            offset = transform.position - TargetTransform.position;
 
     }
 	
@@ -21,9 +24,6 @@ public class SmoothCameraFollow : MonoBehaviour {
 
     void LateUpdate()
     {
-        //Mathf.SmoothStep
-
-        var pos = transform.position;
-        transform.position = Vector3.MoveTowards(pos, TargetTransform.position + offset, Speed);
+        transform.position = TargetTransform.position + offset;
     }
 }
