@@ -14,6 +14,8 @@ public class TogglingPlatform : MonoBehaviour {
     void Start () {
         if (enabled != StartsEnabled)
             Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!");
+		
+		gameObject.SetActive(StartsEnabled);
 	}
 	
 	// Update is called once per frame
