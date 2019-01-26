@@ -5,7 +5,6 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_OutTex ("OutTexture", 2D) = "" {}
 	}
 	SubShader
 	{
@@ -39,7 +38,7 @@
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 
-			RWTexture2D<float4> _OutTex;
+			RWStructuredBuffer<float> _OutBuffer : register(u1);
 			
 			v2f vert (appdata v)
 			{
@@ -53,7 +52,8 @@
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-				_OutTex[i.uv] = col;
+				_OutBuffer[0] = 12.0;
+				_OutBuffer[1] = 15.5;
 				return col;
 			}
 			ENDCG
