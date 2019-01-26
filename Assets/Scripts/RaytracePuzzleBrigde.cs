@@ -39,7 +39,6 @@ public class RaytracePuzzleBrigde : MonoBehaviour {
         if(hasChanged)
         {
            var platforms = FindObjectsOfTypeAll<TogglingPlatform>();
-           Debug.Log(platforms.Count);
            foreach(var platform in platforms)
            {
                 platform.TogglePlatform(IsRedPressed, IsGreenPressed, IsBluePressed);
@@ -47,6 +46,7 @@ public class RaytracePuzzleBrigde : MonoBehaviour {
         }
 	}
 
+    // From: http://answers.unity.com/answers/1272001/view.html
     public static List<T> FindObjectsOfTypeAll<T>()
     {
         List<T> results = new List<T>();

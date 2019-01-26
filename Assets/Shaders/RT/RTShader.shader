@@ -12,6 +12,7 @@
 		Pass
 		{
 			CGPROGRAM
+			#pragma target 4.5
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"
@@ -315,6 +316,8 @@
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
+
+			RWStructuredBuffer<float> _OutBuffer : register(u1);
 			
 			v2f vert (appdata v)
 			{
@@ -326,7 +329,7 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				float time = _Time * 20;
+				float time = _Time * 5;
 				Ray r;
 				r.O = float3(0,0,0);
 				r.D = normalize(float3(i.uv - float2(.5,.5), 1.0f));
@@ -375,7 +378,14 @@
 					if (!hitData.hit) col = GetBackgroundColor(r);
 					else col = hitData.col * dot(hitData.N, L);
 				}
-				return float4(col.xyz,1);
+
+				if (col.r > 0.8)
+					_OutBuffer[0] = 1.0;
+				if (col.g > 0.8)
+					_OutBuffer[1] = 1.0;
+				if (col.b > 0.8)
+					_OutBuffer[2] = 1.0;
+				return float4(col.rgb,1);
 			}
 			ENDCG
 		}
