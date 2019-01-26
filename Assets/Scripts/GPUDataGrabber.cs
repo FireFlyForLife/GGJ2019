@@ -33,7 +33,7 @@ public class GPUDataGrabber : MonoBehaviour {
     {
         Graphics.ClearRandomWriteTargets();
 
-        Rect rectReadPicture = new Rect(0, 0, RenderTexture2.width, RenderTexture2.height);
+        //Rect rectReadPicture = new Rect(0, 0, RenderTexture2.width, RenderTexture2.height);
 
         var texture = uiImage.texture;
         var material = uiImage.material;
