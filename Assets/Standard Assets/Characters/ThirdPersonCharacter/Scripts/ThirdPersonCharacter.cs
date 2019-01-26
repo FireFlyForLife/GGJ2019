@@ -7,6 +7,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	[RequireComponent(typeof(Animator))]
 	public class ThirdPersonCharacter : MonoBehaviour
 	{
+	    [SerializeField] private Camera cam;
 		[SerializeField] float m_MovingTurnSpeed = 360;
 		[SerializeField] float m_StationaryTurnSpeed = 180;
 		[SerializeField] float m_JumpPower = 12f;
@@ -78,6 +79,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             Vector3 v = m_Rigidbody.velocity;
             v.x = (hor * m_MoveSpeedMultiplier) * Time.deltaTime;
+		    v = Camera.main.transform.right * (hor * m_MoveSpeedMultiplier) * Time.deltaTime + new Vector3(0, v.y, 0);
 
             // we preserve the existing y part of the current velocity.
             v.y = m_Rigidbody.velocity.y;
