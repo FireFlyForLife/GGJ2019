@@ -414,6 +414,8 @@
 							if (hd2.hit) col = hd2.col * dot(hd2.N, L);
 							else col = GetBackgroundColor(r);
 						}
+
+						col *= 0.4;
 					}
 					else col = hitData.col * dot(hitData.N,L);
 				} 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RTScript : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class RTScript : MonoBehaviour
 
     public float MovementSpeed = 5;
     public float RotationSpeed = 2;
+
+    public PlayerManager PlayerManager;
+
+    public RawImage RedImage;
+    public RawImage GreenImage;
+    public RawImage BlueImage;
 
     private ComputeBuffer buffer;
     private float rotation;
@@ -22,6 +29,9 @@ public class RTScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        if (!PlayerManager.GetComponent<PlayerOpenMap>().IsMapOpened)
+            return;
+
         var hor = Input.GetAxis("Horizontal");
         var vert = Input.GetAxis("Vertical");
         var roll = Input.GetAxis("Roll");
@@ -55,15 +65,20 @@ public class RTScript : MonoBehaviour
         positons.Add(new Vector4(0, 0, -10, 0));
         positons.Add(new Vector4(10, 0, 0, 0));
         positons.Add(new Vector4(-10, 0, 0, 0));
+        positons.Add(new Vector4(0, 1.5f, 0, 0));
         colors.Add(new Vector4(0,0,0,0));
         colors.Add(new Vector4(1,0,0,0));
         colors.Add(new Vector4(0,1,0,0));
         colors.Add(new Vector4(0,0,1,0));
         colors.Add(new Vector4(1,0,1,0));
+        colors.Add(new Vector4(1,1,1,0));
+
+        if (positons.Count != colors.Count)
+            Debug.LogWarning("Warning! the colors array is not the same size as positions in the raytracer!!!", this);
 
         mat.SetVectorArray("_Positions", positons);
         mat.SetVectorArray("_Colors", colors);
-        mat.SetInt("_Size", 5);
+        mat.SetInt("_Size", positons.Count);
         mat.SetVector("_CamPosition", position);
         mat.SetFloat("_CamRotation", rotation * Mathf.Deg2Rad);
         mat.SetBuffer("_OutBuffer", buffer);
@@ -74,8 +89,24 @@ public class RTScript : MonoBehaviour
         for (int i = 0; i < floats.Length; i++)
         {
             if(floats[i] != 0f)
+            {
                 print(mat.name + " : " + i + ":  " + floats[i]);
+            }
         }
+
+        bool r = !Mathf.Approximately( floats[0], 0f);
+        bool g = !Mathf.Approximately(floats[1] , 0f);
+        bool b = !Mathf.Approximately(floats[2] , 0f);
+        RedImage.enabled = r;
+        GreenImage.enabled = g;
+        BlueImage.enabled = b;
+
+        var bridge = PlayerManager.GetComponent<RaytracePuzzleBrigde>();
+        bridge.IsRedPressed = r;
+        bridge.IsGreenPressed = g;
+        bridge.IsBluePressed = b;
+
+
     }
 
     //void OnPostRender()
