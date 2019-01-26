@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Rotator : MonoBehaviour
 {
@@ -19,18 +20,15 @@ public class Rotator : MonoBehaviour
         m_target = m_rotation1;
     }
 
-    IEnumerator TurnTowardsTarget(float rotation)
-    {
-        yield return null;
-    }
-
     void OnTriggerEnter(Collider c)
     {
         if (!m_isBusy)
         {
             player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
-            m_cam.transform.parent.localEulerAngles =  new Vector3(0, m_target, 0);
+            //m_cam.transform.parent.localEulerAngles =  new Vector3(0, m_target, 0);
             c.transform.position = transform.position;
+            m_cam.transform.parent.GetComponent<SmoothCameraRotator>().TargetYRotation = m_target;
+            player.GetComponent<ThirdPersonCharacter>().CameraRightVector = Quaternion.Euler(0, m_target, 0) * Vector3.right;
             //c.transform.position =  new Vector3(transform.position.x, c.transform.position.y, transform.position.z);
             //m_cam.transform.position = c.transform.position + c.transform.InverseTransformVector(new Vector3(0, 0, 10));
             //if (Math.Abs(m_target - m_rotation1) < 0.001)

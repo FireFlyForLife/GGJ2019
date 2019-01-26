@@ -17,6 +17,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_AnimSpeedMultiplier = 1f;
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
 
+        [HideInInspector]
+        public Vector3 CameraRightVector = Vector3.right;
+
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
 		bool m_IsGrounded;
@@ -76,10 +79,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			UpdateAnimator(move);
 
             var hor = Input.GetAxis("Horizontal");
-
+            
             Vector3 v = m_Rigidbody.velocity;
             v.x = (hor * m_MoveSpeedMultiplier) * Time.deltaTime;
-		    v = Camera.main.transform.right * (hor * m_MoveSpeedMultiplier) * Time.deltaTime + new Vector3(0, v.y, 0);
+		    v = CameraRightVector * (hor * m_MoveSpeedMultiplier) * Time.deltaTime + new Vector3(0, v.y, 0);
 
             // we preserve the existing y part of the current velocity.
             v.y = m_Rigidbody.velocity.y;
