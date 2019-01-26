@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class PlatformerPlayer : MonoBehaviour {
     private Rigidbody playerRigidbody;
     private PlayerOpenMap playerOpenMap;
     private CapsuleCollider capsuleCollider;
+    [SerializeField] private GameObject camera;
 
     private bool canJump = true;
 
@@ -27,17 +29,22 @@ public class PlatformerPlayer : MonoBehaviour {
         {
             var velocity = playerRigidbody.velocity;
             velocity.x = 0f;
+            velocity.z = 0f;
             playerRigidbody.velocity = velocity;
             return;
         }
 
         float hor = Input.GetAxis("Horizontal");
         float jump = Input.GetAxisRaw("Jump");
-
-
         {
             var velocity = playerRigidbody.velocity;
-            velocity.x = hor * MovementSpeed;
+            if (Math.Abs(camera.transform.localEulerAngles.y % 90.0) < 0.0001)
+                velocity = camera.transform.right * hor * MovementSpeed + new Vector3(0, velocity.y, 0);
+            else
+            {
+                velocity.x = 0;
+                velocity.z = 0;
+            }
             playerRigidbody.velocity = velocity;
 
             //playerRigidbody.AddForce(new Vector3(hor, 0f, 0f) * MovementSpeed);
