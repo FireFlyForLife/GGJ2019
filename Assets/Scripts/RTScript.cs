@@ -15,6 +15,7 @@ public class RTScript : MonoBehaviour
     public RawImage RedImage;
     public RawImage GreenImage;
     public RawImage BlueImage;
+    public bool RTEnabled = false;
 
     private ComputeBuffer buffer;
     private float rotation;
@@ -56,6 +57,8 @@ public class RTScript : MonoBehaviour
     {
         Graphics.ClearRandomWriteTargets();
 
+        if (!RTEnabled)
+            return;
 
         List<Vector4> positons = new List<Vector4>();
         List<Vector4> colors = new List<Vector4>();
@@ -105,8 +108,6 @@ public class RTScript : MonoBehaviour
         bridge.IsRedPressed = r;
         bridge.IsGreenPressed = g;
         bridge.IsBluePressed = b;
-
-
     }
 
     //void OnPostRender()
