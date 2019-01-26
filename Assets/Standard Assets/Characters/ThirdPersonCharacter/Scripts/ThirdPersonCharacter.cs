@@ -18,6 +18,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
 
         [HideInInspector]
+        public bool HandleInput = true;
+
+        [HideInInspector]
         public Vector3 CameraRightVector = Vector3.right;
 
 		Rigidbody m_Rigidbody;
@@ -78,7 +81,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// send input and other state parameters to the animator
 			UpdateAnimator(move);
 
-            var hor = Input.GetAxis("Horizontal");
+            float hor;
+            if (HandleInput)
+                hor = Input.GetAxis("Horizontal");
+            else
+                hor = 0;
             
             Vector3 v = m_Rigidbody.velocity;
             v.x = (hor * m_MoveSpeedMultiplier) * Time.deltaTime;

@@ -12,6 +12,7 @@ public enum PlayerAxis
 public class PlayerManager : MonoBehaviour {
     private HealthComponent health;
     private ThirdPersonUserControl userControl;
+    private ThirdPersonCharacter thirdPersonCharacter;
     [SerializeField]
     private PlayerUI playerUI;
     private Camera playerCamera;
@@ -68,10 +69,19 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public ThirdPersonCharacter ThirdPersonCharacter
+    {
+        get
+        {
+            return thirdPersonCharacter;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         health = GetComponent<HealthComponent>();
         userControl = GetComponent<ThirdPersonUserControl>();
+        thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
         playerOpenMap = GetComponent<PlayerOpenMap>();
 
         playerCamera = Camera.main;
@@ -91,5 +101,7 @@ public class PlayerManager : MonoBehaviour {
         }
         
         userControl.HandleInput = (!playerOpenMap.IsMapOpened);
-	}
+        thirdPersonCharacter.HandleInput = (!playerOpenMap.IsMapOpened);
+
+    }
 }
