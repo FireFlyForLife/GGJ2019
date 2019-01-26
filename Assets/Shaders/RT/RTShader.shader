@@ -353,12 +353,12 @@
 
 				float maxDist = 99999999.;
 
-				Cube cubes[50];
+				Cube cubes[10];
 				for (int i = 0; i < _Size; ++i)
 				{
 					if(_Colors[i].x + _Colors[i].y + _Colors[i].z > 0.)
 					cubes[i] = GenerateCube(_Positions[i], time, float3(1, 1, 10), _Colors[i].xyz);
-					else cubes[i] = GenerateCube(_Positions[i], time + i * 5, float3(1, 1, 10), _Colors[i].xyz);
+					else cubes[i] = GenerateCube(_Positions[i], 0 + i * 5, float3(1, 1, 10), _Colors[i].xyz);
 				}
 
 				float3 pos = float3(0, 0, 0);
