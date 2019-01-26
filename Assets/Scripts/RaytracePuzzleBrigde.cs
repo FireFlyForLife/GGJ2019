@@ -5,11 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class RaytracePuzzleBrigde : MonoBehaviour {
     // debug key: '1'
-    public bool IsRedPressed;
+    private bool isRedPressed;
     // debug key: '2'
-    public bool IsGreenPressed;
+    private bool isGreenPressed;
     // debug key: '3'
-    public bool IsBluePressed;
+    private bool isBluePressed;
+
+    private bool isDirty;
+
+    public bool IsRedPressed
+    {
+        get
+        {
+            return isRedPressed;
+        }
+
+        set
+        {
+            isRedPressed = value;
+            isDirty = true;
+        }
+    }
+
+    public bool IsGreenPressed
+    {
+        get
+        {
+            return isGreenPressed;
+        }
+
+        set
+        {
+            isGreenPressed = value;
+            isDirty = true;
+        }
+    }
+
+    public bool IsBluePressed
+    {
+        get
+        {
+            return isBluePressed;
+        }
+
+        set
+        {
+            isBluePressed = value;
+            isDirty = true;
+        }
+    }
 
     // Use this for initialization
     void Start () {
@@ -18,7 +62,6 @@ public class RaytracePuzzleBrigde : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        bool hasChanged = true;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             IsRedPressed = (!IsRedPressed);
@@ -31,20 +74,27 @@ public class RaytracePuzzleBrigde : MonoBehaviour {
         {
             IsBluePressed = (!IsBluePressed);
         }
-        else
-        {
-            hasChanged = false;
-        }
 
-        if(hasChanged)
+        bool hasChanged = isDirty;
+
+        if (hasChanged)
         {
-           var platforms = FindObjectsOfTypeAll<TogglingPlatform>();
-           foreach(var platform in platforms)
-           {
-                platform.TogglePlatform(IsRedPressed, IsGreenPressed, IsBluePressed);
-           }
+            StartCoroutine(ToggleThingsWithDelay());
+           
+            isDirty = false;
         }
 	}
+
+    IEnumerator ToggleThingsWithDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        var platforms = FindObjectsOfTypeAll<TogglingPlatform>();
+        foreach (var platform in platforms)
+        {
+            platform.TogglePlatform(IsRedPressed, IsGreenPressed, IsBluePressed);
+        }
+    }
 
     // From: http://answers.unity.com/answers/1272001/view.html
     public static List<T> FindObjectsOfTypeAll<T>()
