@@ -162,19 +162,19 @@
 				cube.vtx[22].color = float3(1, 0, 0);
 				cube.vtx[23].color = float3(1, 0, 0);
 
-				cube.vtx[24].color = float3(1, 0, 1);
-				cube.vtx[25].color = float3(1, 0, 1);
-				cube.vtx[26].color = float3(1, 0, 1);
-				cube.vtx[27].color = float3(1, 0, 1);
-				cube.vtx[28].color = float3(1, 0, 1);
-				cube.vtx[29].color = float3(1, 0, 1);
+				cube.vtx[24].color = float3(1, 0, 0);
+				cube.vtx[25].color = float3(1, 0, 0);
+				cube.vtx[26].color = float3(1, 0, 0);
+				cube.vtx[27].color = float3(1, 0, 0);
+				cube.vtx[28].color = float3(1, 0, 0);
+				cube.vtx[29].color = float3(1, 0, 0);
 
-				cube.vtx[30].color = float3(1, 0, 1);
-				cube.vtx[31].color = float3(1, 0, 1);
-				cube.vtx[32].color = float3(1, 0, 1);
-				cube.vtx[33].color = float3(1, 0, 1);
-				cube.vtx[34].color = float3(1, 0, 1);
-				cube.vtx[35].color = float3(1, 0, 1);
+				cube.vtx[30].color = float3(1, 0, 0);
+				cube.vtx[31].color = float3(1, 0, 0);
+				cube.vtx[32].color = float3(1, 0, 0);
+				cube.vtx[33].color = float3(1, 0, 0);
+				cube.vtx[34].color = float3(1, 0, 0);
+				cube.vtx[35].color = float3(1, 0, 0);
 				return cube;
 			}
 
