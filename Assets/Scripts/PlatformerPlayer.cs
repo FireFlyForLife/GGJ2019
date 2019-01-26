@@ -10,6 +10,7 @@ public class PlatformerPlayer : MonoBehaviour {
 
     private Rigidbody playerRigidbody;
     private PlayerOpenMap playerOpenMap;
+    private CapsuleCollider capsuleCollider;
 
     private bool canJump = true;
 
@@ -17,6 +18,7 @@ public class PlatformerPlayer : MonoBehaviour {
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody>();
         playerOpenMap = GetComponent<PlayerOpenMap>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
     }
 	
 	// Update is called once per frame
@@ -57,13 +59,24 @@ public class PlatformerPlayer : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        //TODO: improve
-        canJump = true;
+        var lowerY = capsuleCollider.bounds.min.y;
+        foreach(var contact in collision.contacts)
+        {
+            if (contact.point.y <= lowerY)
+                canJump = true;
+        }
+
+        //canJump = true;
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        canJump = true;
+        var lowerY = capsuleCollider.bounds.min.y;
+        foreach (var contact in collision.contacts)
+        {
+            if (contact.point.y <= lowerY)
+                canJump = true;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
