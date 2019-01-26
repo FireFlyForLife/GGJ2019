@@ -37,7 +37,7 @@ public class TogglingPlatform : MonoBehaviour {
         bool[] inputBools = new bool[] { red, green, blue };
         bool[] ourBools = new bool[] { IsRed, IsGreen, IsBlue };
 
-        bool ShouldBeOn = inputBools.SequenceEqual(ourBools);
+        bool ShouldBeOn = ShouldTurnOn(inputBools, ourBools);
 
         var isEnabled = enabled;
         if (isEnabled && !ShouldBeOn)
