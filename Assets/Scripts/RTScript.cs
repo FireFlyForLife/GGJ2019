@@ -24,8 +24,9 @@ public class RTScript : MonoBehaviour
 	{
         var hor = Input.GetAxis("Horizontal");
         var vert = Input.GetAxis("Vertical");
+        var roll = Input.GetAxis("Roll");
 
-        rotation += hor * RotationSpeed * Time.deltaTime;
+        rotation += roll * RotationSpeed * Time.deltaTime;
         rotation = Mathf.Repeat(rotation, 360f);
 
         Matrix4x4 tempMat = new Matrix4x4();
