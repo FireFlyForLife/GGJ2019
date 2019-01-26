@@ -994,7 +994,7 @@ Camera:
   m_GameObject: {fileID: 168590336}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -2972,6 +2972,11 @@ Prefab:
       propertyPath: m_GravityMultiplier
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114638292667539558, guid: ac1de9c61285a6340852e0c1fc04bbe7,
+        type: 2}
+      propertyPath: RaytraceCamera
+      value: 
+      objectReference: {fileID: 168590336}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac1de9c61285a6340852e0c1fc04bbe7, type: 2}
   m_IsPrefabParent: 0
@@ -5118,9 +5123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d6a744ece5a741b59475cd671d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRedPressed: 0
-  IsGreenPressed: 0
-  IsBluePressed: 0
 --- !u!136 &702490769
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5645,7 +5647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98347b474e1f514aa142e452e8cf279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RaytraceCamera: {fileID: 0}
+  RaytraceCamera: {fileID: 168590336}
   IsMapOpened: 0
 --- !u!114 &782685698
 MonoBehaviour:
@@ -5659,9 +5661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d6a744ece5a741b59475cd671d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRedPressed: 0
-  IsGreenPressed: 0
-  IsBluePressed: 0
 --- !u!114 &782685699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5696,6 +5695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandleInput: 1
 --- !u!136 &782685701
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8115,6 +8115,7 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 542ff3086c6163b4e87657b591661159, type: 2}
   MovementSpeed: 5
   RotationSpeed: 60
+  PlayerManager: {fileID: 782685695}
   RedImage: {fileID: 405347211}
   GreenImage: {fileID: 766365888}
   BlueImage: {fileID: 165839114}

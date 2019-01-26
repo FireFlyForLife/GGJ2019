@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour {
     private PlayerUI playerUI;
     private Camera playerCamera;
     private PlayerAxis playerAxis = PlayerAxis.X;
+    private PlayerOpenMap playerOpenMap;
 
     public Camera PlayerCamera
     {
@@ -59,10 +60,19 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public PlayerOpenMap PlayerOpenMap
+    {
+        get
+        {
+            return playerOpenMap;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         health = GetComponent<HealthComponent>();
         userControl = GetComponent<ThirdPersonUserControl>();
+        playerOpenMap = GetComponent<PlayerOpenMap>();
 
         playerCamera = Camera.main;
     }
@@ -79,5 +89,7 @@ public class PlayerManager : MonoBehaviour {
 
             playerUI.DeadText.gameObject.SetActive(true);
         }
+        
+        userControl.HandleInput = (!playerOpenMap.IsMapOpened);
 	}
 }
