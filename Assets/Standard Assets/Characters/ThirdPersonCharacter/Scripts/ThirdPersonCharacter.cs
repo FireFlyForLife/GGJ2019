@@ -73,7 +73,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			// send input and other state parameters to the animator
 			UpdateAnimator(move);
-		}
+
+            var hor = Input.GetAxis("Horizontal");
+
+            Vector3 v = m_Rigidbody.velocity;
+            v.x = (hor * m_MoveSpeedMultiplier) * Time.deltaTime;
+
+            // we preserve the existing y part of the current velocity.
+            v.y = m_Rigidbody.velocity.y;
+            m_Rigidbody.velocity = v;
+        }
 
 
 		void ScaleCapsuleForCrouching(bool crouch)
@@ -188,14 +197,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
-			if (m_IsGrounded && Time.deltaTime > 0)
-			{
-				Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+			//if (m_IsGrounded && Time.deltaTime > 0)
+			//{
+   //             var hor = Input.GetAxis("Horizontal");
 
-				// we preserve the existing y part of the current velocity.
-				v.y = m_Rigidbody.velocity.y;
-				m_Rigidbody.velocity = v;
-			}
+   //             Vector3 v = m_Rigidbody.velocity;
+   //             v.x = (hor * m_MoveSpeedMultiplier) * Time.deltaTime;
+
+			//	// we preserve the existing y part of the current velocity.
+			//	v.y = m_Rigidbody.velocity.y;
+			//	m_Rigidbody.velocity = v;
+			//}
 		}
 
 
