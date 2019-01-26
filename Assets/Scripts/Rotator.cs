@@ -6,6 +6,7 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
     [SerializeField] private Camera m_cam;
+    [SerializeField] private GameObject m_wallToEnable;
     [SerializeField] private float m_rotation1;
     [SerializeField] private float m_rotation2;
     [SerializeField] private float m_rotSpeed = 5;
@@ -24,8 +25,16 @@ public class Rotator : MonoBehaviour
         {
             m_cam.transform.parent.localEulerAngles =  new Vector3(0, m_target, 0);
             p.transform.position =  new Vector3(transform.position.x, p.transform.position.y, transform.position.z);
-            if (Math.Abs(m_target - m_rotation1) < 0.001) m_target = m_rotation2;
-            else m_target = m_rotation1;
+            if (Math.Abs(m_target - m_rotation1) < 0.001)
+            {
+                m_target = m_rotation2;
+                if(m_wallToEnable)m_wallToEnable.SetActive(false);
+            }
+            else
+            {
+                m_target = m_rotation1;
+                if (m_wallToEnable) m_wallToEnable.SetActive(true);
+            }
         }
     }
 
