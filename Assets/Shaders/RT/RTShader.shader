@@ -391,9 +391,9 @@
 						}
 					}
 					if (hd2.hit) {
-						_OutBuffer[0] = hd2.col.r;
-						_OutBuffer[1] = hd2.col.g;
-						_OutBuffer[2] = hd2.col.b;
+						_OutBuffer[0] += hd2.col.r;
+						_OutBuffer[1] += hd2.col.g;
+						_OutBuffer[2] += hd2.col.b;
 
 						col = hd2.col * dot(hd2.N, L);
 					} else {
