@@ -14,6 +14,8 @@ public class TogglingPlatform : MonoBehaviour {
     void Start () {
         if (enabled != StartsEnabled)
             Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!");
+		
+		gameObject.SetActive(StartsEnabled);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +39,7 @@ public class TogglingPlatform : MonoBehaviour {
         bool[] inputBools = new bool[] { red, green, blue };
         bool[] ourBools = new bool[] { IsRed, IsGreen, IsBlue };
 
-        bool ShouldBeOn = inputBools.SequenceEqual(ourBools);
+        bool ShouldBeOn = ShouldTurnOn(inputBools, ourBools);
 
         var isEnabled = enabled;
         if (isEnabled && !ShouldBeOn)

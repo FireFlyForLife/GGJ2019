@@ -6,7 +6,14 @@ public class RTScript : MonoBehaviour
 {
     [SerializeField] private Material mat;
 
+    public float MovementSpeed = 5;
+    public float RotationSpeed = 2;
+
     private ComputeBuffer buffer;
+    private float rotation;
+    private Vector3 position;
+
+    private Matrix4x4 viewMatrixCache;
 
 	void Start () {
         buffer = new ComputeBuffer(3, sizeof(float), ComputeBufferType.Default);
@@ -15,8 +22,22 @@ public class RTScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        var hor = Input.GetAxis("Horizontal");
+        var vert = Input.GetAxis("Vertical");
+        var roll = Input.GetAxis("Roll");
 
-	}
+        rotation += roll * RotationSpeed * Time.deltaTime;
+        rotation = Mathf.Repeat(rotation, 360f);
+
+        Matrix4x4 tempMat = new Matrix4x4();
+        tempMat.SetTRS(Vector3.zero, Quaternion.AngleAxis(rotation, Vector3.up), Vector3.one);
+
+        Vector4 forward4 = tempMat * new Vector4(hor * MovementSpeed * Time.deltaTime, 0, vert * MovementSpeed * Time.deltaTime, 1);
+        position += new Vector3(forward4.x, forward4.y, forward4.z);
+
+        //viewMatrixCache = new Matrix4x4();
+        //viewMatrixCache.SetTRS(position, Quaternion.AngleAxis(rotation, Vector3.up), Vector3.one);
+    }
 
     void OnRenderObject()
     {
@@ -26,6 +47,8 @@ public class RTScript : MonoBehaviour
             positons.Add(new Vector4(0, 0, i * 4, 0));
         mat.SetVectorArray("_Positions", positons);
         mat.SetInt("_Size", 2);
+        mat.SetVector("_CamPosition", position);
+        mat.SetFloat("_CamRotation", rotation * Mathf.Deg2Rad);
         mat.SetBuffer("_OutBuffer", buffer);
         Graphics.SetRandomWriteTarget(1, buffer);
 

@@ -316,6 +316,8 @@
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
+			float _CamRotation;
+			float3 _CamPosition;
 
 			RWStructuredBuffer<float> _OutBuffer : register(u1);
 			
@@ -334,10 +336,12 @@
 				r.O = float3(0,0,0);
 				r.D = normalize(float3(i.uv - float2(.5,.5), 1.0f));
 
-				float4x4 matX = rotationfloat4x4(float3(0, 1., 0), -time - 9.4);
+				/*float4x4 matX = rotationfloat4x4(float3(0, 1., 0), -time - 9.4);
 				float x = sin(-time) * 10. + _Time;
-				float z = cos(-time) * 10. + _Time;
-				r.O = float3(x, 0., z);
+				float y = 0.0;
+				float z = cos(-time) * 10. + _Time;*/
+				float4x4 matX = rotationfloat4x4(float3(0, 1, 0), _CamRotation);
+				r.O = _CamPosition;
 				r.D = mul(matX, float4(r.D.xyz, 1.)).xyz;
 
 				float3 col = float3(0,0,0);
