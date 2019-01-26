@@ -89,6 +89,8 @@
 			{
 				Cube cube;
 				cube.pos = pos;
+				cube.col = float3(1.0, 0.0, 0.0);
+
 				float4x4 mat = rotationfloat4x4(axis, angle);
 				cube.vtx[0].pos = mul(mat, float4(-0.5, -0.5, 0.5, 1.)).xyz;
 				cube.vtx[1].pos = mul(mat, float4(0.5, 0.5, 0.5, 1.)).xyz;
@@ -139,26 +141,26 @@
 				cube.vtx[4].color = float3(1, 0, 0);
 				cube.vtx[5].color = float3(1, 0, 0);
 
-				cube.vtx[6].color = float3(0, 1, 0);
-				cube.vtx[7].color = float3(0, 1, 0);
-				cube.vtx[8].color = float3(0, 1, 0);
-				cube.vtx[9].color = float3(0, 1, 0);
-				cube.vtx[10].color = float3(0, 1, 0);
-				cube.vtx[11].color = float3(0, 1, 0);
+				cube.vtx[6].color = float3 (1, 0, 0);
+				cube.vtx[7].color = float3 (1, 0, 0);
+				cube.vtx[8].color = float3 (1, 0, 0);
+				cube.vtx[9].color = float3 (1, 0, 0);
+				cube.vtx[10].color = float3(1, 0, 0);
+				cube.vtx[11].color = float3(1, 0, 0);
 
-				cube.vtx[12].color = float3(0, 0, 1);
-				cube.vtx[13].color = float3(0, 0, 1);
-				cube.vtx[14].color = float3(0, 0, 1);
-				cube.vtx[15].color = float3(0, 0, 1);
-				cube.vtx[16].color = float3(0, 0, 1);
-				cube.vtx[17].color = float3(0, 0, 1);
+				cube.vtx[12].color = float3(1, 0, 0);
+				cube.vtx[13].color = float3(1, 0, 0);
+				cube.vtx[14].color = float3(1, 0, 0);
+				cube.vtx[15].color = float3(1, 0, 0);
+				cube.vtx[16].color = float3(1, 0, 0);
+				cube.vtx[17].color = float3(1, 0, 0);
 
-				cube.vtx[18].color = float3(1, 1, 0);
-				cube.vtx[19].color = float3(1, 1, 0);
-				cube.vtx[20].color = float3(1, 1, 0);
-				cube.vtx[21].color = float3(1, 1, 0);
-				cube.vtx[22].color = float3(1, 1, 0);
-				cube.vtx[23].color = float3(1, 1, 0);
+				cube.vtx[18].color = float3(1, 0, 0);
+				cube.vtx[19].color = float3(1, 0, 0);
+				cube.vtx[20].color = float3(1, 0, 0);
+				cube.vtx[21].color = float3(1, 0, 0);
+				cube.vtx[22].color = float3(1, 0, 0);
+				cube.vtx[23].color = float3(1, 0, 0);
 
 				cube.vtx[24].color = float3(1, 0, 1);
 				cube.vtx[25].color = float3(1, 0, 1);
@@ -167,12 +169,12 @@
 				cube.vtx[28].color = float3(1, 0, 1);
 				cube.vtx[29].color = float3(1, 0, 1);
 
-				cube.vtx[30].color = float3(0, 1, 1);
-				cube.vtx[31].color = float3(0, 1, 1);
-				cube.vtx[32].color = float3(0, 1, 1);
-				cube.vtx[33].color = float3(0, 1, 1);
-				cube.vtx[34].color = float3(0, 1, 1);
-				cube.vtx[35].color = float3(0, 1, 1);
+				cube.vtx[30].color = float3(1, 0, 1);
+				cube.vtx[31].color = float3(1, 0, 1);
+				cube.vtx[32].color = float3(1, 0, 1);
+				cube.vtx[33].color = float3(1, 0, 1);
+				cube.vtx[34].color = float3(1, 0, 1);
+				cube.vtx[35].color = float3(1, 0, 1);
 				return cube;
 			}
 
@@ -358,6 +360,8 @@
 				HitData hitData;
 				hitData.hit = false;
 				hitData.dist = maxDist;
+				float3 closestOrigin = r.O;
+				float3 closestDirection = r.D;
 				for (int i = 0; i < _Size; ++i)
 				{
 					HitData hd;
@@ -367,28 +371,48 @@
 					if (hd.hit)
 					{
 						hitData = hd;
-						r.O = hd.P;
-						r.D = reflect(r.D, hd.N);
-
-
-						hd = IntersectFloor(r, hd.dist);
-						if (hd.hit) col = hd.col * dot(hd.N, L);
-						else col = GetBackgroundColor(r);
+						closestOrigin = hd.P;
+						closestDirection = reflect(r.D, hd.N);
 					}
 				}
-				if (!hitData.hit)
-				{
+				if (hitData.hit) {
+					r.O = closestOrigin;
+					r.D = closestDirection;
+
+					HitData hd2;
+					hd2.hit = false;
+					hd2.dist = maxDist;
+					for (int j = 0; j < _Size; ++j) {
+						HitData hd3;
+						hd3.dist = hd2.dist;
+						hd3 = IntersectCube(cubes[j], r, hd3.dist);
+						if (hd3.hit) {
+							hd2 = hd3;
+						}
+					}
+					if (hd2.hit) {
+						_OutBuffer[0] = hd2.col.r;
+						_OutBuffer[1] = hd2.col.g;
+						_OutBuffer[2] = hd2.col.b;
+
+						col = hd2.col * dot(hd2.N, L);
+					} else {
+						hd2 = IntersectFloor(r, hd2.dist);
+						if (hd2.hit) col = hd2.col * dot(hd2.N, L);
+						else col = GetBackgroundColor(r);
+					}
+				} else {
 					hitData = IntersectFloor(r, hitData.dist);
 					if (!hitData.hit) col = GetBackgroundColor(r);
 					else col = hitData.col * dot(hitData.N, L);
 				}
 
-				if (col.r > 0.8)
-					_OutBuffer[0] = 1.0;
-				if (col.g > 0.8)
-					_OutBuffer[1] = 1.0;
-				if (col.b > 0.8)
-					_OutBuffer[2] = 1.0;
+				//if (col.r > 0.8)
+				//	_OutBuffer[0] = 1.0;
+				//if (col.g > 0.8)
+				//	_OutBuffer[1] = 1.0;
+				//if (col.b > 0.8)
+				//	_OutBuffer[2] = 1.0;
 				return float4(col.rgb,1);
 			}
 			ENDCG
