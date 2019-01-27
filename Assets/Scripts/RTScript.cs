@@ -6,15 +6,13 @@ using UnityEngine.UI;
 public class RTScript : MonoBehaviour
 {
     [SerializeField] private Material mat;
+    [SerializeField] private Material red, green, blue, combined;
 
     public float MovementSpeed = 5;
     public float RotationSpeed = 2;
 
     public PlayerManager PlayerManager;
 
-    public RawImage RedImage;
-    public RawImage GreenImage;
-    public RawImage BlueImage;
     public bool RTEnabled = false;
 
     private ComputeBuffer buffer;
@@ -100,14 +98,15 @@ public class RTScript : MonoBehaviour
         bool r = !Mathf.Approximately( floats[0], 0f);
         bool g = !Mathf.Approximately(floats[1] , 0f);
         bool b = !Mathf.Approximately(floats[2] , 0f);
-        RedImage.enabled = r;
-        GreenImage.enabled = g;
-        BlueImage.enabled = b;
 
         var bridge = PlayerManager.GetComponent<RaytracePuzzleBrigde>();
         bridge.IsRedPressed = r;
         bridge.IsGreenPressed = g;
         bridge.IsBluePressed = b;
+        red.color = new Color(1, 0, 0) * (r ? 1 : 0);
+        green.color = new Color(0, 1, 0) * (g ? 1 : 0);
+        blue.color = new Color(0, 0, 1) * (b ? 1 : 0);
+        combined.color = new Color(red.color.r, green.color.g, blue.color.b);
     }
 
     //void OnPostRender()

@@ -1,70 +1,21 @@
 fileFormatVersion: 2
-guid: 04de5e158136eca4b98b8162d2655907
+guid: 04693f0ee0c8f104ab09b9e3227ad8f3
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: joint2
-    100002: pCube6
-    100004: pCylinder6
-    100006: //RootNode
-    100008: polySurface1
-    100010: polySurface10
-    100012: polySurface2
-    100014: polySurface3
-    100016: polySurface4
-    100018: polySurface5
-    100020: polySurface6
-    100022: polySurface7
-    100024: polySurface8
-    100026: polySurface9
-    100028: Root
-    100030: transform1
-    100032: transform10
-    100034: transform11
-    100036: transform2
-    100038: transform3
-    100040: transform4
-    100042: transform5
-    100044: transform6
-    100046: transform7
-    100048: transform8
-    100050: transform9
-    400000: joint2
-    400002: pCube6
-    400004: pCylinder6
-    400006: //RootNode
-    400008: polySurface1
-    400010: polySurface10
-    400012: polySurface2
-    400014: polySurface3
-    400016: polySurface4
-    400018: polySurface5
-    400020: polySurface6
-    400022: polySurface7
-    400024: polySurface8
-    400026: polySurface9
-    400028: Root
-    400030: transform1
-    400032: transform10
-    400034: transform11
-    400036: transform2
-    400038: transform3
-    400040: transform4
-    400042: transform5
-    400044: transform6
-    400046: transform7
-    400048: transform8
-    400050: transform9
-    2100000: hinge
-    2100002: outsidePHone
-    2100004: Buttons
-    2100006: Soundthng
-    2100008: THe_Square
-    2100010: Frame
-    2300000: polySurface10
-    3300000: polySurface10
-    4300000: polySurface10
-    7400000: Take 001
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Antenna
+    2100002: Button3
+    2100004: Screen
+    2100006: Button4
+    2100008: Button2
+    2100010: ScreenSurrounding
+    2100012: Case
+    2100014: Buttton1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: PHone
     9500000: //RootNode
   externalObjects: {}
   materials:
