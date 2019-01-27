@@ -20820,10 +20820,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 542ff3086c6163b4e87657b591661159, type: 2}
-  red: {fileID: 0}
-  green: {fileID: 0}
-  blue: {fileID: 0}
-  combined: {fileID: 0}
+  red: {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
+  green: {fileID: 2100000, guid: 536e6a536e0bc03418370b2d0b1b811f, type: 2}
+  blue: {fileID: 2100000, guid: aa4a47f96d3dc744091b4c80788bf5df, type: 2}
+  combined: {fileID: 2100000, guid: d4fedd75cf39eb04987e61cc98a2ff1f, type: 2}
   MovementSpeed: 5
   RotationSpeed: 60
   PlayerManager: {fileID: 782685695}
