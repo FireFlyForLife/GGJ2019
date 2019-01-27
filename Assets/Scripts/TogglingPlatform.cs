@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class TogglingPlatform : MonoBehaviour {
+public class TogglingPlatform : MonoBehaviour
+{
     public bool IsRed;
     public bool IsGreen;
     public bool IsBlue;
@@ -15,16 +16,18 @@ public class TogglingPlatform : MonoBehaviour {
     private float rotationStart;
     public float RotationAmount = 0f;
 
+    [SerializeField]
     private bool IsCurrentlyEnabled;
 
-    private MeshRenderer meshRenderer;
+    private MeshRenderer[] meshRenderers;
     private new Collider collider;
 
     private Coroutine coroutine;
 
     // Use this for initialization
-    void Start () {
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
+    void Start()
+    {
+        meshRenderers = GetComponentsInChildren<MeshRenderer>();
         collider = GetComponent<Collider>();
 
         rotationStart = transform.localEulerAngles.y;
@@ -37,23 +40,29 @@ public class TogglingPlatform : MonoBehaviour {
         IsCurrentlyEnabled = StartsEnabled;
         if (!IsCurrentlyEnabled)
         {
-            var col = meshRenderer.material.color;
-            col.a = DisabledTransparency;
-            meshRenderer.material.color = col;
-
-            if(collider)
+            foreach (var meshRenderer in meshRenderers)
+            {
+                foreach (var mat in meshRenderer.materials)
+                {
+                    var col = mat.color;
+                    col.a = DisabledTransparency;
+                    mat.color = col;
+                }
+            }
+            if (collider)
                 collider.enabled = false;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private bool ShouldTurnOn(bool[] inputBools, bool[] ourBools)
     {
-        for(int i = 0; i < inputBools.Length; ++i)
+        for (int i = 0; i < inputBools.Length; ++i)
         {
             if (ourBools[i] && inputBools[i] != ourBools[i])
                 return false;
@@ -89,33 +98,45 @@ public class TogglingPlatform : MonoBehaviour {
         bool[] ourBools = new bool[] { IsRed, IsGreen, IsBlue };
 
         bool ShouldBeOn = ShouldTurnOn(inputBools, ourBools);
-        
+
         if (IsCurrentlyEnabled && !ShouldBeOn)
         {
             //gameObject.SetActive(StartsEnabled);
-            var col = meshRenderer.material.color;
-            col.a = StartsEnabled ? 1.0f : DisabledTransparency;
-            meshRenderer.material.color = col;
+            foreach (var meshRenderer in meshRenderers)
+            {
+                foreach (var mat in meshRenderer.materials)
+                {
+                    var col = mat.color;
+                    col.a = StartsEnabled ? 1.0f : DisabledTransparency;
+                    mat.color = col;
+                }
+            }
 
-            if(collider)
+            if (collider)
                 collider.enabled = StartsEnabled;
             IsCurrentlyEnabled = false;
 
-            if(coroutine != null)
+            if (coroutine != null)
                 StopCoroutine(coroutine);
             coroutine = StartCoroutine(RotateDoor());
         }
-        else if(ShouldBeOn)
+        else if (ShouldBeOn)
         {
-            var col = meshRenderer.material.color;
-            col.a = !StartsEnabled ? 1.0f : DisabledTransparency;
-            meshRenderer.material.color = col;
+            foreach (var meshRenderer in meshRenderers)
+            {
+                foreach (var mat in meshRenderer.materials)
+                {
+                    var col = mat.color;
+                    col.a = !StartsEnabled ? 1.0f : DisabledTransparency;
+                    mat.color = col;
+                }
+            }
 
-            if(collider)
+            if (collider)
                 collider.enabled = !StartsEnabled;
 
             IsCurrentlyEnabled = true;
-            if(coroutine != null)
+            if (coroutine != null)
                 StopCoroutine(coroutine);
             coroutine = StartCoroutine(RotateDoor());
 

@@ -793,6 +793,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.2815746
       objectReference: {fileID: 0}
+    - target: {fileID: 114923020039075640, guid: 2084050317625cf44990e73bb4056939,
+        type: 2}
+      propertyPath: StartsEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2084050317625cf44990e73bb4056939, type: 2}
   m_IsPrefabParent: 0
@@ -1284,6 +1289,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &142529461
 Prefab:
   m_ObjectHideFlags: 0
@@ -2290,6 +2296,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &206763888
 Prefab:
   m_ObjectHideFlags: 0
@@ -2518,6 +2525,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &227732918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2575,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &227732921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2916,6 +2925,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &242824024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3622,6 +3632,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &366371995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4451,6 +4462,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &446351134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6398,6 +6410,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!64 &636156189
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7220,6 +7233,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &737945868
 Prefab:
   m_ObjectHideFlags: 0
@@ -7779,6 +7793,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!64 &829725983
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7856,6 +7871,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4076230887671022, guid: 7b67c3759425c6c45b5eb869ee9e32fc,
     type: 2}
   m_PrefabInternal: {fileID: 833340367}
+--- !u!1 &838607139 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1076382058945118, guid: 73328753fee578a43a16541148bfd300,
+    type: 2}
+  m_PrefabInternal: {fileID: 148851393}
+--- !u!114 &838607140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838607139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc981091b0027f740a4fb867dec25945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsRed: 0
+  IsGreen: 1
+  IsBlue: 0
+  StartsEnabled: 1
+  DisabledTransparency: 0.35
+  RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &839927634
 Prefab:
   m_ObjectHideFlags: 0
@@ -7982,6 +8020,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4076230887671022, guid: 7b67c3759425c6c45b5eb869ee9e32fc,
     type: 2}
   m_PrefabInternal: {fileID: 844678757}
+--- !u!1 &848582920 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1001509899678552, guid: 177d6c0c74b85a24bb1227bb3e9c33da,
+    type: 2}
+  m_PrefabInternal: {fileID: 306202000}
+--- !u!114 &848582921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848582920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc981091b0027f740a4fb867dec25945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsRed: 0
+  IsGreen: 0
+  IsBlue: 1
+  StartsEnabled: 1
+  DisabledTransparency: 0.35
+  RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &849163083
 Prefab:
   m_ObjectHideFlags: 0
@@ -8473,6 +8534,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &883516964
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8847,6 +8909,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!4 &928395449 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4586349171288392, guid: 52ff121ba155aee438bcf5bcfb470088,
@@ -9296,6 +9359,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &996104599
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,6 +9658,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003471003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1005873843 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1076382058945118, guid: 73328753fee578a43a16541148bfd300,
+    type: 2}
+  m_PrefabInternal: {fileID: 163845362}
+--- !u!114 &1005873844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005873843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc981091b0027f740a4fb867dec25945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsRed: 0
+  IsGreen: 1
+  IsBlue: 0
+  StartsEnabled: 1
+  DisabledTransparency: 0.35
+  RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1006889665
 Prefab:
   m_ObjectHideFlags: 0
@@ -10384,6 +10471,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1115428575
 Prefab:
   m_ObjectHideFlags: 0
@@ -11397,6 +11485,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!64 &1202721448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12329,6 +12418,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1258853053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12620,6 +12710,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1274332452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12961,6 +13052,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1288386502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13104,6 +13196,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &1290273681
 GameObject:
   m_ObjectHideFlags: 0
@@ -13717,6 +13810,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1354195540
 Prefab:
   m_ObjectHideFlags: 0
@@ -13900,6 +13994,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1369891690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14482,6 +14577,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &1397294523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14682,6 +14778,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1432375002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14735,6 +14832,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1432374999}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1434602033 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1375468341614324, guid: 8aad1940060b4614fae780e57354a807,
+    type: 2}
+  m_PrefabInternal: {fileID: 1592508445}
+--- !u!114 &1434602034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434602033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc981091b0027f740a4fb867dec25945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsRed: 0
+  IsGreen: 0
+  IsBlue: 1
+  StartsEnabled: 1
+  DisabledTransparency: 0.35
+  RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1434839108
 Prefab:
   m_ObjectHideFlags: 0
@@ -15636,6 +15756,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1496896190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16803,6 +16924,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &1600195576
 GameObject:
   m_ObjectHideFlags: 0
@@ -16905,6 +17027,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!4 &1618355469 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4837501710005074, guid: 885ff59070ba44f4e9e12241f02335bd,
@@ -16959,6 +17082,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1621290219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17131,6 +17255,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.2815746
       objectReference: {fileID: 0}
+    - target: {fileID: 114515371182305196, guid: 147b26570d4956b4d91598fe3086f36a,
+        type: 2}
+      propertyPath: StartsEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 147b26570d4956b4d91598fe3086f36a, type: 2}
   m_IsPrefabParent: 0
@@ -17236,6 +17365,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1638956956
 Prefab:
   m_ObjectHideFlags: 0
@@ -18134,6 +18264,7 @@ MonoBehaviour:
   StartsEnabled: 0
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1719399829
 Prefab:
   m_ObjectHideFlags: 0
@@ -18224,6 +18355,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1722669143
 Prefab:
   m_ObjectHideFlags: 0
@@ -18549,6 +18681,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!4 &1746938135 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4551501102246368, guid: c937accef201ee34ebad118386f6c3e0,
@@ -19124,6 +19257,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1001 &1793072534
 Prefab:
   m_ObjectHideFlags: 0
@@ -19234,6 +19368,11 @@ Prefab:
     - target: {fileID: 4750558023940218, guid: 147b26570d4956b4d91598fe3086f36a, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.28157
+      objectReference: {fileID: 0}
+    - target: {fileID: 114515371182305196, guid: 147b26570d4956b4d91598fe3086f36a,
+        type: 2}
+      propertyPath: StartsEnabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 147b26570d4956b4d91598fe3086f36a, type: 2}
@@ -20091,7 +20230,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1903673806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.05, y: -0.13, z: 19.69}
+  m_LocalPosition: {x: -40.05, y: -0.13, z: 19.93}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 2139654114}
@@ -20387,6 +20526,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!23 &1938620577
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20955,6 +21095,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!1 &1978333083
 GameObject:
   m_ObjectHideFlags: 0
@@ -21291,6 +21432,7 @@ MonoBehaviour:
   StartsEnabled: 1
   DisabledTransparency: 0.35
   RotationAmount: 0
+  IsCurrentlyEnabled: 0
 --- !u!4 &2061905676 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4223493869100772, guid: 2084050317625cf44990e73bb4056939,
