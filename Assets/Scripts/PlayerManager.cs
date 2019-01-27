@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour {
     private PlayerAxis playerAxis = PlayerAxis.X;
     private PlayerOpenMap playerOpenMap;
     private Rigidbody playerRigidbody;
+    private Animator animator;
 
     public Camera PlayerCamera
     {
@@ -86,6 +87,14 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public Animator Animator
+    {
+        get
+        {
+            return animator;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         health = GetComponent<HealthComponent>();
@@ -93,6 +102,7 @@ public class PlayerManager : MonoBehaviour {
         thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
         playerOpenMap = GetComponent<PlayerOpenMap>();
         playerRigidbody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
 
         playerCamera = Camera.main;
     }
@@ -113,6 +123,9 @@ public class PlayerManager : MonoBehaviour {
         userControl.HandleInput = (!playerOpenMap.IsMapOpened);
         thirdPersonCharacter.HandleInput = (!playerOpenMap.IsMapOpened);
         playerRigidbody.isKinematic = playerOpenMap.IsMapOpened;
+        var playerVel = playerRigidbody.velocity;
+        playerVel.y = 0;
+        animator.SetFloat("Velocity", playerVel.magnitude);
 
     }
 }

@@ -14,7 +14,6 @@ public class SmoothCameraRotator : MonoBehaviour {
 	void Update () {
 		if(!Mathf.Approximately( Mathf.DeltaAngle( transform.rotation.eulerAngles.y, TargetYRotation), 0f) )
         {
-            print("Rotating...");
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, TargetYRotation, 0), DeltaRotation);
         }
 	}
