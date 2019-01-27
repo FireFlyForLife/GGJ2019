@@ -11,8 +11,9 @@ public class PlayerOpenMap : MonoBehaviour {
 	void Start ()
 	{
 	    rtScript = FindObjectOfType<RTScript>();
-        IsMapOpened = RaytraceCamera.activeSelf;
+        //IsMapOpened = RaytraceCamera.activeSelf;
 	    rtScript.RTEnabled = IsMapOpened;
+	    RaytraceCamera.SetActive(IsMapOpened);
     }
 	
 	// Update is called once per frame
@@ -22,7 +23,7 @@ public class PlayerOpenMap : MonoBehaviour {
         {
             IsMapOpened = !IsMapOpened;
             rtScript.RTEnabled = IsMapOpened;
-            //RaytraceCamera.SetActive(IsMapOpened);
+            RaytraceCamera.SetActive(IsMapOpened);
             RaytraceCamera.transform.localPosition = new Vector3(0, 0, -3 * (IsMapOpened ? 1:0));
         }
     }
