@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class RaytracePuzzleBrigde : MonoBehaviour {
     // debug key: '1'
+    [SerializeField]
     private bool isRedPressed;
     // debug key: '2'
+    [SerializeField]
     private bool isGreenPressed;
     // debug key: '3'
+    [SerializeField]
     private bool isBluePressed;
 
     private bool isDirty;

@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour {
     private Camera playerCamera;
     private PlayerAxis playerAxis = PlayerAxis.X;
     private PlayerOpenMap playerOpenMap;
+    private Rigidbody playerRigidbody;
 
     public Camera PlayerCamera
     {
@@ -77,12 +78,21 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public Rigidbody PlayerRigidbody
+    {
+        get
+        {
+            return playerRigidbody;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         health = GetComponent<HealthComponent>();
         userControl = GetComponent<ThirdPersonUserControl>();
         thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
         playerOpenMap = GetComponent<PlayerOpenMap>();
+        playerRigidbody = GetComponent<Rigidbody>();
 
         playerCamera = Camera.main;
     }
@@ -102,6 +112,7 @@ public class PlayerManager : MonoBehaviour {
         
         userControl.HandleInput = (!playerOpenMap.IsMapOpened);
         thirdPersonCharacter.HandleInput = (!playerOpenMap.IsMapOpened);
+        playerRigidbody.isKinematic = playerOpenMap.IsMapOpened;
 
     }
 }

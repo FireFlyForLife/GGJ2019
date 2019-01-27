@@ -89,13 +89,13 @@ public class RTScript : MonoBehaviour
 
         float[] floats = new float[3];
         buffer.GetData(floats);
-        for (int i = 0; i < floats.Length; i++)
-        {
-            if(floats[i] != 0f)
-            {
-                print(mat.name + " : " + i + ":  " + floats[i]);
-            }
-        }
+        //for (int i = 0; i < floats.Length; i++)
+        //{
+        //    if(floats[i] != 0f)
+        //    {
+        //        print(mat.name + " : " + i + ":  " + floats[i]);
+        //    }
+        //}
 
         bool r = !Mathf.Approximately( floats[0], 0f);
         bool g = !Mathf.Approximately(floats[1] , 0f);

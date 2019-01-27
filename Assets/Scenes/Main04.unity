@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -705,6 +705,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &114359720
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -719,7 +720,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d4fedd75cf39eb04987e61cc98a2ff1f, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -858,6 +859,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &131508745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,6 +1190,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &191090594
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1202,7 +1205,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1341,6 +1344,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &212735059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1392,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &212735062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1541,6 +1546,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &220878498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,6 +1655,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &227732921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1780,6 +1787,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &239681675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1794,7 +1802,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1911,6 +1919,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &242824024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1925,7 +1934,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2271,6 +2280,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &302464485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2401,6 +2411,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &340004947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2532,6 +2543,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &366371995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2546,7 +2558,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2761,6 +2773,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &398048591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2775,7 +2788,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3272,7 +3285,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 432563988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3464,6 +3477,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &446351134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3679,6 +3693,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &455419789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3693,7 +3708,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3949,7 +3964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490917781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -1.2, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1498594558}
@@ -4033,6 +4048,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &518664600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4133,6 +4149,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &536429647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4491,6 +4508,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &629608424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4736,6 +4754,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &685553108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5135,6 +5154,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1001 &737945868
 Prefab:
   m_ObjectHideFlags: 0
@@ -5287,6 +5307,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &756920083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5301,7 +5322,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d4fedd75cf39eb04987e61cc98a2ff1f, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5387,6 +5408,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &763439854
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5794,6 +5816,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &833690129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6279,6 +6302,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &883516964
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6293,7 +6317,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6493,7 +6517,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6547,6 +6571,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &968406091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,6 +6715,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &988787051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6704,7 +6730,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6789,7 +6815,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6843,6 +6869,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &996104599
 GameObject:
   m_ObjectHideFlags: 0
@@ -7262,6 +7289,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1036722551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7516,6 +7544,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &1095758840
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7530,7 +7559,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7616,6 +7645,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1103818163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7630,7 +7660,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7715,7 +7745,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7769,6 +7799,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!1 &1121243132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7877,6 +7908,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1153006311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7891,7 +7923,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8091,6 +8123,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &1182794126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8342,7 +8375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1245173857
 Transform:
   m_ObjectHideFlags: 0
@@ -8540,6 +8573,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &1258853053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8640,6 +8674,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1274332452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8740,6 +8775,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1288386502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8986,6 +9022,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1330406371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9196,7 +9233,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5463238a94e644547bacc04af36bf923, type: 2}
+  - {fileID: 2100000, guid: d4fedd75cf39eb04987e61cc98a2ff1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9250,6 +9287,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &1353404540
 GameObject:
   m_ObjectHideFlags: 0
@@ -9328,6 +9366,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1369891690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9342,7 +9381,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9428,6 +9467,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1374501487
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9692,6 +9732,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &1409145022
 GameObject:
   m_ObjectHideFlags: 0
@@ -9937,6 +9978,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &1432375002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9951,7 +9993,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10008,7 +10050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1437709729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10036,7 +10078,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1437709728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10090,8 +10132,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1437709728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.71, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalPosition: {x: 0.23, y: 0, z: -1.94}
+  m_LocalScale: {x: 2.07, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 432563993}
   m_RootOrder: 0
@@ -10452,6 +10494,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!23 &1496896190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10523,7 +10566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1498594554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10537,9 +10580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_cam: {fileID: 1394647547}
   m_wallToEnable: {fileID: 490917781}
-  m_rotation1: -90
+  m_rotation1: 0
   player: {fileID: 782685695}
-  playerAxisToChangeTo: 1
+  playerAxisToChangeTo: 0
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -10551,7 +10594,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1498594553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11073,6 +11116,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!1 &1600195576
 GameObject:
   m_ObjectHideFlags: 0
@@ -11119,7 +11163,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11173,6 +11217,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &1619597588
 GameObject:
   m_ObjectHideFlags: 0
@@ -11251,6 +11296,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1621290219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11265,7 +11311,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11434,6 +11480,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!1 &1640034802
 GameObject:
   m_ObjectHideFlags: 0
@@ -11863,6 +11910,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!1 &1765007178
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,7 +11985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 542ff3086c6163b4e87657b591661159, type: 2}
   MovementSpeed: 5
-  RotationSpeed: 60
+  RotationSpeed: 110
   PlayerManager: {fileID: 782685695}
   RedImage: {fileID: 28263732}
   GreenImage: {fileID: 1194472392}
@@ -12084,6 +12132,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &1808598554
 GameObject:
   m_ObjectHideFlags: 0
@@ -12130,7 +12179,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: d36c71317f6575444aadc2417fbf39aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12184,6 +12233,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 0
+  DisabledTransparency: 0.35
 --- !u!1 &1841220265
 GameObject:
   m_ObjectHideFlags: 0
@@ -12408,6 +12458,7 @@ MonoBehaviour:
   IsGreen: 1
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1935971175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12508,6 +12559,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &1938620577
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12891,7 +12943,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b28fe10f7359fad4b98d47ff71519f6d, type: 2}
+  - {fileID: 2100000, guid: 1ba33ee2f3814b54297dc760d7d7a503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12945,6 +12997,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 0
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!1 &1982496070
 GameObject:
   m_ObjectHideFlags: 0
@@ -13462,6 +13515,7 @@ MonoBehaviour:
   IsGreen: 0
   IsBlue: 1
   StartsEnabled: 1
+  DisabledTransparency: 0.35
 --- !u!23 &2099692306
 MeshRenderer:
   m_ObjectHideFlags: 0

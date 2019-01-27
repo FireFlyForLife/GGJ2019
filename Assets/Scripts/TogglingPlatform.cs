@@ -10,13 +10,33 @@ public class TogglingPlatform : MonoBehaviour {
 
     public bool StartsEnabled = true;
 
+    public float DisabledTransparency = 0.35f;
+
+    [SerializeField]
+    private bool IsCurrentlyEnabled;
+
+    private MeshRenderer meshRenderer;
+    private new Collider collider;
+
     // Use this for initialization
     void Start () {
-        if (enabled != StartsEnabled)
-            Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!", this);
-		
-		gameObject.SetActive(StartsEnabled);
-	}
+        meshRenderer = GetComponent<MeshRenderer>();
+        collider = GetComponent<Collider>();
+        //if (enabled != StartsEnabled)
+        //    Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!", this);
+
+        //gameObject.SetActive(StartsEnabled);
+
+        IsCurrentlyEnabled = StartsEnabled;
+        if (!IsCurrentlyEnabled)
+        {
+            var col = meshRenderer.material.color;
+            col.a = DisabledTransparency;
+            meshRenderer.material.color = col;
+
+            collider.enabled = false;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -41,14 +61,29 @@ public class TogglingPlatform : MonoBehaviour {
 
         bool ShouldBeOn = ShouldTurnOn(inputBools, ourBools);
 
-        var isEnabled = enabled;
-        if (isEnabled && !ShouldBeOn)
+        //if (gameObject.name == "Cardbord Box - Invis (1)")
+        //    Debug.Log(ShouldBeOn);
+        
+        if (IsCurrentlyEnabled && !ShouldBeOn)
         {
-            gameObject.SetActive(StartsEnabled);
+            Debug.Log("Disabling the ting again!!", this);
+            //gameObject.SetActive(StartsEnabled);
+            var col = meshRenderer.material.color;
+            col.a = StartsEnabled ? 1.0f : DisabledTransparency;
+            meshRenderer.material.color = col;
+
+            collider.enabled = StartsEnabled;
+            IsCurrentlyEnabled = false;
         }
         else if(ShouldBeOn)
         {
-            gameObject.SetActive(!StartsEnabled);
+            var col = meshRenderer.material.color;
+            col.a = !StartsEnabled ? 1.0f : DisabledTransparency;
+            meshRenderer.material.color = col;
+
+            collider.enabled = !StartsEnabled;
+
+            IsCurrentlyEnabled = true;
         }
     }
 }
