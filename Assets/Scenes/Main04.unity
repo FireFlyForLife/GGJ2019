@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2290,6 +2290,7 @@ RectTransform:
   - {fileID: 28263730}
   - {fileID: 1194472390}
   - {fileID: 776033080}
+  - {fileID: 1611667673}
   m_Father: {fileID: 865539492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4674,7 +4675,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 256
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 7d6317f95eed8e0469e06a3cb7efd41d, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -7759,7 +7760,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -5.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 234635954}
   m_Father: {fileID: 86972279}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9527,6 +9529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 542ff3086c6163b4e87657b591661159, type: 2}
+  red: {fileID: 2100008, guid: 04693f0ee0c8f104ab09b9e3227ad8f3, type: 3}
+  green: {fileID: 2100002, guid: 04693f0ee0c8f104ab09b9e3227ad8f3, type: 3}
+  blue: {fileID: 2100006, guid: 04693f0ee0c8f104ab09b9e3227ad8f3, type: 3}
+  combined: {fileID: 2100014, guid: 04693f0ee0c8f104ab09b9e3227ad8f3, type: 3}
   MovementSpeed: 5
   RotationSpeed: 110
   PlayerManager: {fileID: 782685695}
