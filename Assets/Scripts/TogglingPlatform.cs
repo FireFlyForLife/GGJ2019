@@ -12,16 +12,23 @@ public class TogglingPlatform : MonoBehaviour {
 
     public float DisabledTransparency = 0.35f;
 
-    [SerializeField]
+    private float rotationStart;
+    public float RotationAmount = 0f;
+
     private bool IsCurrentlyEnabled;
 
     private MeshRenderer meshRenderer;
     private new Collider collider;
 
+    private Coroutine coroutine;
+
     // Use this for initialization
     void Start () {
         meshRenderer = GetComponent<MeshRenderer>();
         collider = GetComponent<Collider>();
+
+        rotationStart = transform.localEulerAngles.y;
+
         //if (enabled != StartsEnabled)
         //    Debug.LogWarning("Toggling platform has it's gameobject mismatched from it's StartEnabled flag!", this);
 
@@ -54,6 +61,27 @@ public class TogglingPlatform : MonoBehaviour {
         return true;
     }
 
+    private IEnumerator RotateDoor()
+    {
+        float target;
+        if (IsCurrentlyEnabled)
+            target = rotationStart + RotationAmount;
+        else
+            target = rotationStart;
+
+        while (!Mathf.Approximately(transform.localEulerAngles.y, target))
+        {
+            var yrot = transform.localEulerAngles.y;
+            yrot = Mathf.MoveTowardsAngle(yrot, target, 0.5f);
+
+            var eulerRot = transform.localEulerAngles;
+            eulerRot.y = yrot;
+            transform.localEulerAngles = eulerRot;
+
+            yield return null;
+        }
+    }
+
     public void TogglePlatform(bool red, bool green, bool blue)
     {
         bool[] inputBools = new bool[] { red, green, blue };
@@ -70,6 +98,10 @@ public class TogglingPlatform : MonoBehaviour {
 
             collider.enabled = StartsEnabled;
             IsCurrentlyEnabled = false;
+
+            if(coroutine != null)
+                StopCoroutine(coroutine);
+            coroutine = StartCoroutine(RotateDoor());
         }
         else if(ShouldBeOn)
         {
@@ -80,6 +112,10 @@ public class TogglingPlatform : MonoBehaviour {
             collider.enabled = !StartsEnabled;
 
             IsCurrentlyEnabled = true;
+            if(coroutine != null)
+                StopCoroutine(coroutine);
+            coroutine = StartCoroutine(RotateDoor());
+
         }
     }
 }

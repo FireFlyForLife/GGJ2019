@@ -503,7 +503,7 @@ Transform:
   m_Children:
   - {fileID: 1394647548}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &86972280
 MonoBehaviour:
@@ -706,6 +706,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &114359720
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -860,6 +861,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &131508745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1193,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &191090594
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1345,6 +1348,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &212735059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1397,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &212735062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1547,6 +1552,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &220878498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1662,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &227732921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1788,6 +1795,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &239681675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1920,6 +1928,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &242824024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2259,7 +2268,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302464482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.31, y: 0.5, z: 2.9}
+  m_LocalPosition: {x: -37.09162, y: 0.5, z: 2.9}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2139654114}
@@ -2281,6 +2290,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &302464485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2290,7 +2300,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2412,6 +2422,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &340004947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2544,6 +2555,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &366371995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2774,6 +2786,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &398048591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3344,7 +3357,7 @@ Transform:
   m_Children:
   - {fileID: 1437709733}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439590919
 GameObject:
@@ -3478,6 +3491,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &446351134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3694,6 +3708,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &455419789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4049,6 +4064,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &518664600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4150,6 +4166,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &536429647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4509,6 +4526,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &629608424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4755,6 +4773,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &685553108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4883,6 +4902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d6a744ece5a741b59475cd671d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRedPressed: 0
+  isGreenPressed: 0
+  isBluePressed: 0
 --- !u!136 &702490769
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5155,6 +5177,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1001 &737945868
 Prefab:
   m_ObjectHideFlags: 0
@@ -5260,6 +5283,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 542ae7ae785098e4899da7e79bca1bfd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &740502272
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f7bd16da2e6863346a297377e58f6462, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &756920080
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,6 +5373,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &756920083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5409,6 +5475,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &763439854
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5624,6 +5691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d6a744ece5a741b59475cd671d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRedPressed: 0
+  isGreenPressed: 0
+  isBluePressed: 0
 --- !u!114 &782685699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5817,6 +5887,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &833690129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6164,7 +6235,7 @@ RectTransform:
   m_Children:
   - {fileID: 1018287559}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6303,6 +6374,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &883516964
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6572,6 +6644,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &968406091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,6 +6789,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &988787051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6870,6 +6944,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &996104599
 GameObject:
   m_ObjectHideFlags: 0
@@ -7290,6 +7365,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1036722551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7523,7 +7599,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095758837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.29838, y: 1.15, z: 4.93}
+  m_LocalPosition: {x: -37.08, y: 1.15, z: 4.93}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2139654114}
@@ -7545,6 +7621,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1095758840
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7554,7 +7631,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7624,7 +7701,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103818160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.26756, y: 1.687, z: 10.52078}
+  m_LocalPosition: {x: -37.04918, y: 1.687, z: 10.52078}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2139654114}
@@ -7646,6 +7723,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1103818163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7655,7 +7733,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7800,6 +7878,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1121243132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7909,6 +7988,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1153006311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8124,6 +8204,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1182794126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8574,6 +8655,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1258853053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8675,6 +8757,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1274332452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8776,6 +8859,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1288386502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9023,6 +9107,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1330406371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9288,6 +9373,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 90
 --- !u!1 &1353404540
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,6 +9453,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1369891690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9468,6 +9555,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1374501487
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9733,6 +9821,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1409145022
 GameObject:
   m_ObjectHideFlags: 0
@@ -9979,6 +10068,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1432375002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10166,7 +10256,7 @@ Transform:
   - {fileID: 865539492}
   - {fileID: 1779403702}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450944715
 GameObject:
@@ -10361,7 +10451,7 @@ Transform:
   m_LocalScale: {x: 2.3681035, y: 2.3681047, z: 2.3681047}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484928555
 GameObject:
@@ -10495,6 +10585,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1496896190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10653,7 +10744,7 @@ Transform:
   m_Children:
   - {fileID: 490917786}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501280474
 GameObject:
@@ -11117,6 +11208,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1600195576
 GameObject:
   m_ObjectHideFlags: 0
@@ -11218,6 +11310,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1619597588
 GameObject:
   m_ObjectHideFlags: 0
@@ -11297,6 +11390,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1621290219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11481,6 +11575,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1640034802
 GameObject:
   m_ObjectHideFlags: 0
@@ -11911,6 +12006,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1765007178
 GameObject:
   m_ObjectHideFlags: 0
@@ -12133,6 +12229,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1808598554
 GameObject:
   m_ObjectHideFlags: 0
@@ -12234,6 +12331,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 0
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1841220265
 GameObject:
   m_ObjectHideFlags: 0
@@ -12437,7 +12535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935971172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.279217, y: 1.13, z: 8.21078}
+  m_LocalPosition: {x: -37.060837, y: 1.13, z: 8.21078}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2139654114}
@@ -12459,6 +12557,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1935971175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12468,7 +12567,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -12560,6 +12659,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &1938620577
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12998,6 +13098,7 @@ MonoBehaviour:
   IsBlue: 0
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!1 &1982496070
 GameObject:
   m_ObjectHideFlags: 0
@@ -13298,7 +13399,7 @@ Transform:
   - {fileID: 893785203}
   - {fileID: 557425951}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076719953
 GameObject:
@@ -13516,6 +13617,7 @@ MonoBehaviour:
   IsBlue: 1
   StartsEnabled: 1
   DisabledTransparency: 0.35
+  RotationAmount: 0
 --- !u!23 &2099692306
 MeshRenderer:
   m_ObjectHideFlags: 0
