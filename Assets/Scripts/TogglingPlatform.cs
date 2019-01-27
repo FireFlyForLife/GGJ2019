@@ -41,7 +41,8 @@ public class TogglingPlatform : MonoBehaviour {
             col.a = DisabledTransparency;
             meshRenderer.material.color = col;
 
-            collider.enabled = false;
+            if(collider)
+                collider.enabled = false;
         }
     }
 	
@@ -96,7 +97,8 @@ public class TogglingPlatform : MonoBehaviour {
             col.a = StartsEnabled ? 1.0f : DisabledTransparency;
             meshRenderer.material.color = col;
 
-            collider.enabled = StartsEnabled;
+            if(collider)
+                collider.enabled = StartsEnabled;
             IsCurrentlyEnabled = false;
 
             if(coroutine != null)
@@ -109,7 +111,8 @@ public class TogglingPlatform : MonoBehaviour {
             col.a = !StartsEnabled ? 1.0f : DisabledTransparency;
             meshRenderer.material.color = col;
 
-            collider.enabled = !StartsEnabled;
+            if(collider)
+                collider.enabled = !StartsEnabled;
 
             IsCurrentlyEnabled = true;
             if(coroutine != null)
