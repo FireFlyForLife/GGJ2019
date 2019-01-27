@@ -24,7 +24,7 @@ public class TogglingPlatform : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
         collider = GetComponent<Collider>();
 
         rotationStart = transform.localEulerAngles.y;
