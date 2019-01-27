@@ -2566,7 +2566,7 @@ MonoBehaviour:
   m_cam: {fileID: 1394647547}
   m_wallToEnable: {fileID: 1437709728}
   m_rotation1: -90
-  player: {fileID: 0}
+  player: {fileID: 89841609}
   playerAxisToChangeTo: 1
   OnPlayerEntered:
     m_PersistentCalls:
@@ -10940,7 +10940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1498594554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10954,9 +10954,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_cam: {fileID: 1394647547}
   m_wallToEnable: {fileID: 490917781}
-  m_rotation1: -90
-  player: {fileID: 0}
-  playerAxisToChangeTo: 1
+  m_rotation1: 0
+  player: {fileID: 89841609}
+  playerAxisToChangeTo: 0
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
