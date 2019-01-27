@@ -60,13 +60,9 @@ public class TogglingPlatform : MonoBehaviour {
         bool[] ourBools = new bool[] { IsRed, IsGreen, IsBlue };
 
         bool ShouldBeOn = ShouldTurnOn(inputBools, ourBools);
-
-        //if (gameObject.name == "Cardbord Box - Invis (1)")
-        //    Debug.Log(ShouldBeOn);
         
         if (IsCurrentlyEnabled && !ShouldBeOn)
         {
-            Debug.Log("Disabling the ting again!!", this);
             //gameObject.SetActive(StartsEnabled);
             var col = meshRenderer.material.color;
             col.a = StartsEnabled ? 1.0f : DisabledTransparency;
